@@ -1,0 +1,2 @@
+SELECT * FROM SymptomQuestions
+ORDER BY MainSymptomId,QusetionId
