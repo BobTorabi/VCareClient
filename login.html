@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - VCare</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <img src="images/vcare_logo.png" alt="VCare Logo" class="logo">
+            <h2 class="mb-4 text-center">VCare Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="email" id="email" class="form-control" placeholder="Email" required>
+                    <div class="error-message" id="emailError"></div>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" class="form-control" placeholder="Password" required>
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" style="color: white;">Login</button>
+                <div class="error-message text-center mt-3" id="loginError"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

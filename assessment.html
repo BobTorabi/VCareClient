@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment - VCare</title>
+    <link rel="stylesheet" href="css/assessment.css">
+</head>
+<body>
+    <!-- Progress Bar for Entire Assessment -->
+    <div class="progress-bar">
+        <div id="progress" class="progress-fill"></div>
+    </div>
+
+    <!-- Date Selector Section -->
+    <section id="dateSelector" class="step">
+        <h4>Select Date of the Report</h4>
+        <input type="date" id="reportDate" min="" max="" class="form-control date-input" required />
+        <button class="btn-next" onclick="proceedToQuestions()">Next</button>
+    </section>
+
+    <!-- Questions Section (Hidden by default) -->
+    <section id="questionsSection" class="step hidden">
+        <h4 id="questionText">Health Assessment</h4>
+        <div id="optionContainer" class="option-container">
+            <!-- Options will be dynamically added here -->
+        </div>
+        <div id="buttonsContainer" class="buttons-container hidden">
+            <button id="previousQuestionBtn" class="btn-prev" onclick="loadPreviousQuestion()">Previous</button>
+            <button id="nextQuestionBtn" class="btn-next" onclick="loadNextQuestion()">Next</button>
+        </div>
+    </section>
+
+    <script src="js/assessment.js"></script>
+</body>
+</html>

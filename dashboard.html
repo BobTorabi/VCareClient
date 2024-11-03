@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - VCare</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header with Logo and Hamburger Menu -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="images/vcare_logo.png" alt="VCare Logo" class="logo" />
+            <span id="userWelcome">Welcome to VCare App</span>
+        </div>
+        <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
+        <div id="slideMenu" class="slide-menu">
+            <ul>
+                <li><a href="#" onclick="viewReportArchive()">Reports Archive</a></li>
+                <li><a href="#" onclick="callHospital()">Call Hospital</a></li>
+                <li><a href="#" onclick="viewProfile()">My Profile</a></li>
+                <li><a href="#" onclick="viewAlarms()">My Alarms</a></li>
+                <li><a href="#" onclick="signOut()">Sign Out</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <h3>Welcome, <span id="userFirstName"></span></h3>
+        <p>Today’s Date: <span id="currentDate"></span></p>
+    </section>
+
+    <!-- Reports Section -->
+    <section class="reports-section">
+        <h4>Recent Reports</h4>
+        <ul class="reports-list">
+            <li onclick="viewReportDetail(1)">Report from Oct 25</li>
+            <li onclick="viewReportDetail(2)">Report from Oct 18</li>
+            <li onclick="viewReportDetail(3)">Report from Oct 11</li>
+            <li onclick="viewReportDetail(4)">Report from Oct 4</li>
+        </ul>
+        <a href="#archive" class="archive-link">View Full Archive</a>
+    </section>
+
+    <!-- Submit Report Button -->
+    <button id="submitReport" class="submit-report-btn" onclick="window.location.href='assessment.html'">Submit New Report</button>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
